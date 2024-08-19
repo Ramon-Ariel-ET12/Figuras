@@ -1,5 +1,7 @@
 ﻿using Biblioteca;
 
+Console.Clear();
+
 Rectangulo rectangulo = new Rectangulo(100, 100);
 
 rectangulo.Mostrar();
