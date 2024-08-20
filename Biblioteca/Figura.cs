@@ -11,6 +11,6 @@ public abstract class Figura
 	public virtual void Mostrar()
 	{
 		Console.WriteLine($"Area: { Area }");
-		Console.WriteLine($"Perimetro: { Perimetro }");
+		Console.WriteLine($"Perimetro: { Perimetro }\n");
 	}
 }

@@ -9,9 +9,9 @@ public class Triangulo : Figura
 	public Triangulo() {}
 	public Triangulo(double lado1, double lado2, double Base)
 	{
-		Lado1 = lado1;
-		Lado2 = lado2;
-		this.Base = Base;
+		Lado1 = Math.Round(lado1, 2);
+		Lado2 = Math.Round(lado2, 2);
+		this.Base = Math.Round(Base, 2);
 		CalcularAltura();
 		CalcularPerimetro();
 		CalcularArea();
@@ -32,7 +32,7 @@ public class Triangulo : Figura
             {
                 hipotenusa = Base;
             }
-		Altura = Math.Sqrt(Math.Pow(hipotenusa, 2) - Math.Pow(Base / 2, 2));
+		Altura = Math.Round(Math.Sqrt(Math.Pow(hipotenusa, 2) - Math.Pow(Base / 2, 2)), 2);
 	}
 	public void Forma()
 	{
@@ -52,12 +52,12 @@ public class Triangulo : Figura
 
 	public override void CalcularArea()
 	{
-		Area =  Altura * Base / 2;
+		Area = Math.Round(Altura * Base / 2, 2);
 	}
 
 	public override void CalcularPerimetro()
 	{
-		Perimetro = Lado1 + Lado2 + Base;
+		Perimetro = Math.Round(Lado1 + Lado2 + Base, 2);
 	}
 
 	public override void Mostrar()

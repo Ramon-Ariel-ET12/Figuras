@@ -2,22 +2,22 @@ namespace Biblioteca;
 
 public class Circulo : Figura
 {
-    private float Radio;
+    private double Radio;
     public Circulo(){}
-    public Circulo(float radio)
+    public Circulo(double radio)
     {
-        Radio = radio;
+        Radio = Math.Round(radio, 2);
         CalcularArea();
         CalcularPerimetro();
     }
     public override void CalcularArea()
     {
-        Area = MathF.PI * MathF.Pow(Radio, 2);
+        Area = Math.Round(MathF.PI * MathF.Pow((float)Radio, 2), 2);
     }
 
     public override void CalcularPerimetro()
     {
-        Perimetro = 2 * MathF.PI * Radio;
+        Perimetro = Math.Round(2 * MathF.PI * Radio, 2);
     }
     public override void Mostrar()
     {

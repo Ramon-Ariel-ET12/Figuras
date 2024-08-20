@@ -7,20 +7,20 @@ public class Rectangulo : Figura
     public Rectangulo(){}
     public Rectangulo(double Ancho, double Altura)
     {
-        this.Ancho = Ancho;
-        this.Altura = Altura;
+        this.Ancho = Math.Round(Ancho, 2);
+        this.Altura = Math.Round(Altura, 2);
         CalcularArea();
         CalcularPerimetro();
     }
 
     public override void CalcularArea()
     {
-        Area = Ancho * Altura;
+        Area = Math.Round(Ancho * Altura, 2);
     }
 
     public override void CalcularPerimetro()
     {
-        Perimetro = 2 * (Ancho + Altura);
+        Perimetro = Math.Round(2 * (Ancho + Altura), 2);
     }
     public override void Mostrar()
     {
