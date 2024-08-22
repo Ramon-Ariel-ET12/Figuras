@@ -2,18 +2,24 @@
 
 Console.Clear();
 
-Rectangulo rectangulo = new Rectangulo(100, 100);
+while (true)
+{
+    Console.Write("Ingrese Lado1: ");
+    var lado1 = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Ingrese Lado2: ");
+    var lado2 = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Ingrese Lado3: ");
+    var Lado3 = Convert.ToDouble(Console.ReadLine());
 
-rectangulo.Mostrar();
+    Console.WriteLine("\n");
 
-Circulo circulo= new Circulo(100);
+    Triangulo triangulo = new (lado1, lado2, Lado3);
+    triangulo.Mostrar();
 
-circulo.Mostrar();
-
-Triangulo equilatero = new (20, 20, 20);
-Triangulo isoceles = new (5, 5, 6);
-Triangulo escaleno = new (9, 20, 21);
-
-equilatero.Mostrar();
-isoceles.Mostrar();
-escaleno.Mostrar();
+    Console.WriteLine("\nTerminar programa?\nsi=1  no=0\n");
+    Console.Write("Respuesta: ");
+    var ciclo = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("\n");
+    if (ciclo == 1)
+        break;
+}
